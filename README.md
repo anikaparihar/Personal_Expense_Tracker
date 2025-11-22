@@ -19,6 +19,32 @@ A modular command-line interface (CLI) application built in Python for tracking,
 
 **Data Storage:** CSV File
 
+**Non-Functional Requirements**
+
+**Reliability:** Validates user input and handles file exceptions to ensure every expense record is correct and persistent.
+
+**Usability:** Simple CLI design with clear menus and instructions for all major workflows.
+
+**Maintainability:** Modular file structure with each file addressing a single component of the larger system.
+
+**Performance:** Efficiently manages thousands of records; operations are optimized for typical use cases.
+
+**Portability:** Works with Python 3.x out of the box, without extra dependencies.
+
+**Security:** Data is local and not transmitted online, ensuring privacy.
+
+**Design Overview**
+**Module Interaction**
+flowchart TD
+    Main[main.py] --> CRUD[expense_crud.py]
+    Main --> IO[data_io.py]
+    Main --> Analytics[analysis_report.py]
+    Main --> Utils[utilities.py]
+    CRUD --> IO
+    Analytics --> IO
+    
+*Functional relationships between major modules.*
+
 **Setup and Running Instructions**
 
 **Project Setup:** Ensure all project files (main.py, data_io.py, expense_crud.py, analysis_report.py, utilities.py) are saved in the same directory.
@@ -65,3 +91,15 @@ Add at least five different expenses across different categories (e.g., Food, Re
 Select option **3 (Generate Summary Report)**. Verify the category totals and grand total are correct.
 
 Select option **6 (Generate Time-Series Report)**. Test grouping by W, M, and Y and verify the output is sensible.
+
+**Enhanced Error Handling**
+Expense CSV loading now skips malformed or incomplete records and gives feedback, ensuring robust long-term performance.
+
+**Potential Enhancements**
+Support for recurring expenses or income
+
+Exporting reports to PDF or Excel
+
+Password protection and file encryption for greater privacy
+
+A graphical (GUI) version of the app
