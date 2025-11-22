@@ -31,13 +31,17 @@ A modular command-line interface (CLI) application built in Python for tracking,
 
 ### Module Interaction
 
-flowchart TD
-Main[main.py] --> CRUD[expense_crud.py]
-Main --> IO[data_io.py]
-Main --> Analytics[analysis_report.py]
-Main --> Utils[utilities.py]
-CRUD --> IO
-Analytics --> IO
+main.py
+
+ ├── expense_crud.py
+ 
+ ├── data_io.py
+ 
+ ├── analysis_report.py
+ 
+ └── utilities.py
+expense_crud.py ──► data_io.py
+analysis_report.py ──► data_io.py
 
 *Functional relationships between major modules.*
 
