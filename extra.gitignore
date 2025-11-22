@@ -1,0 +1,8 @@
+Ignore the generated data file so user spending history is not committed
+
+expenses.csv
+
+Ignore standard Python cache directories and temporary files
+
+pycache/
+*.pyc
