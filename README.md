@@ -93,9 +93,11 @@ Select option **3 (Generate Summary Report)**. Verify the category totals and gr
 Select option **6 (Generate Time-Series Report)**. Test grouping by W, M, and Y and verify the output is sensible.
 
 **Enhanced Error Handling**
+
 Expense CSV loading now skips malformed or incomplete records and gives feedback, ensuring robust long-term performance.
 
 **Potential Enhancements**
+
 Support for recurring expenses or income
 
 Exporting reports to PDF or Excel
